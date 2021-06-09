@@ -42,6 +42,7 @@ pipeline {
     }
 
     stage('Docker BnP') {
+      agent any
       steps {
         script {
           docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
